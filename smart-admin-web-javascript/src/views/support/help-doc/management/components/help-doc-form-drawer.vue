@@ -1,12 +1,3 @@
-<!--
-  * 帮助文档表单
-  * 
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-drawer
     :title="formData.helpDocId ? '编辑系统手册' : '新建系统手册'"
@@ -53,7 +44,6 @@
         />
       </a-form-item>
     </a-form>
-
     <template #footer>
       <a-space>
         <a-button @click="onClose">取消</a-button>

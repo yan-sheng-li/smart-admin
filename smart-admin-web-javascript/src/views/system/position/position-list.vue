@@ -1,10 +1,3 @@
-<!--
-  * 职务表
-  *
-  * @Author:    kaiyun
-  * @Date:      2024-06-23 23:31:38
-  * @Copyright  <a href="https://1024lab.net">1024创新实验室</a>
--->
 <template>
   <!---------- 查询表单form begin ----------->
   <a-form class="smart-query-form">
@@ -29,7 +22,6 @@
     </a-row>
   </a-form>
   <!---------- 查询表单form end ----------->
-
   <a-card size="small" :bordered="false" :hoverable="true">
     <!---------- 表格操作行 begin ----------->
     <a-row class="smart-table-btn-block">

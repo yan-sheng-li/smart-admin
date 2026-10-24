@@ -1,12 +1,3 @@
-<!--
-  * 递归菜单
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-06 20:29:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <div class="recursion-container" v-show="topMenu.children && topMenu.children.length > 0">
     <!-- 顶部logo区域 -->
@@ -48,7 +39,6 @@
   import { useAppConfigStore } from '/@/store/modules/system/app-config';
   import { useUserStore } from '/@/store/modules/system/user';
   import logoImg from '/@/assets/images/logo/smart-admin-logo.png';
-
   const websiteName = computed(() => useAppConfigStore().websiteName);
   const theme = computed(() => useAppConfigStore().$state.sideMenuTheme);
 

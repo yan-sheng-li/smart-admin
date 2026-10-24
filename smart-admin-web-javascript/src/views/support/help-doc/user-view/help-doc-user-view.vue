@@ -1,12 +1,3 @@
-<!--
-  * 帮助文档详情
-  * 
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-card size="small" :bordered="false">
     <div v-if="helpDocDetail">
@@ -29,7 +20,6 @@
     <a-divider v-if="helpDocDetail.attachment && helpDocDetail.attachment.length > 0" />
     <div v-if="helpDocDetail.attachment && helpDocDetail.attachment.length > 0">附件：<FilePreview :fileList="helpDocDetail.attachment" /></div>
   </a-card>
-
   <a-card title="阅读记录" size="small" class="smart-margin-top10" :bordered="false">
     <HelpDocViewRecordList ref="helpDocViewRecordListRef" :helpDocId="route.query.helpDocId" />
   </a-card>

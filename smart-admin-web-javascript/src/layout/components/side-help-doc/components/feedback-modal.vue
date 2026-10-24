@@ -1,12 +1,3 @@
-<!--
-  *  意见反馈提交弹窗
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-06 20:40:16
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-modal :open="visible" title="意见反馈" :closable="false" :maskClosable="true" >
     <a-form :labelCol="{ span: 6 }">
@@ -39,7 +30,6 @@ import { message } from 'ant-design-vue';
 import { FILE_FOLDER_TYPE_ENUM } from '/@/constants/support/file-const';
 import Upload from '/@/components/support/file-upload/index.vue';
 import { smartSentry } from '/@/lib/smart-sentry';
-
 defineExpose({
   show,
 });

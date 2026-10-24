@@ -1,13 +1,3 @@
-<!--
-  *  表格列设置
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-26 23:45:51
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <a-modal :width="800" :open="visible" title="设置列" :destroyOnClose="true" :closable="false">
     <div v-if="!tableId">
@@ -68,7 +58,6 @@
         </template>
       </a-table>
     </div>
-
     <template #footer>
       <a-button key="back" @click="hide">取消</a-button>
       <a-button v-if="tableId" key="submit" type="primary" :loading="submitLoading" @click="save">保存</a-button>

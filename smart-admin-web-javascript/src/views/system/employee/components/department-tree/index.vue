@@ -1,12 +1,3 @@
-<!--
-  * 部门树形结构
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-08 20:46:18
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card class="tree-container">
     <a-row class="smart-margin-bottom10">
@@ -40,7 +31,6 @@
   import { departmentApi } from '/@/api/system/department-api';
   import departmentEmitter from '../../department-mitt';
   import { smartSentry } from '/@/lib/smart-sentry';
-
   const DEPARTMENT_PARENT_ID = 0;
 
   // ----------------------- 组件参数 ---------------------

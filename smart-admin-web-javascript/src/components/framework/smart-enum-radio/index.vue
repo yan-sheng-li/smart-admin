@@ -1,13 +1,3 @@
-<!--
-  * 枚举 radio
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-08-08 20:32:30 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
-  *
--->
 <template>
   <template v-if="isButton">
     <a-radio-group v-model:value="selectValue" @change="handleChange" button-style="solid" :disabled="disabled">
@@ -24,7 +14,6 @@
     </a-radio-group>
   </template>
 </template>
-
 <script setup>
   import { ref, watch, onMounted, getCurrentInstance } from 'vue';
 

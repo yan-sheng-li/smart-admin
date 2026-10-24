@@ -1,12 +1,3 @@
-<!--
-  * 当前所选部门的子部门 人员管理右上半部分
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-08 20:46:18
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card class="child-dept-container">
     <a-breadcrumb>
@@ -14,7 +5,6 @@
         {{ item }}
       </a-breadcrumb-item>
     </a-breadcrumb>
-
     <a-list class="department-list" :data-source="props.selectedDepartmentChildren">
       <template #renderItem="{ item }">
         <a-list-item>

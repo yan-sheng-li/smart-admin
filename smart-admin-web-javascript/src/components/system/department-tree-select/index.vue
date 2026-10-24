@@ -1,13 +1,3 @@
-<!--
-  * 部门 树形选择框
-
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 23:05:43
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <a-tree-select
     :value="props.value"
@@ -27,7 +17,6 @@
   import { onMounted, ref } from 'vue';
   import _ from 'lodash';
   import { departmentApi } from '/@/api/system/department-api';
-
   const props = defineProps({
     // 绑定值
     value: Number,

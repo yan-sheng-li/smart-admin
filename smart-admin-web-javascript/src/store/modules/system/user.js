@@ -1,12 +1,3 @@
-/*
- * 登录用户
- *
- * @Author:    1024创新实验室-主任：卓大
- * @Date:      2022-09-06 20:55:09
- * @Wechat:    zhuda1024
- * @Email:     lab1024@163.com
- * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
- */
 import _ from 'lodash';
 import { defineStore } from 'pinia';
 import localKey from '/@/constants/local-storage-key-const';
@@ -15,7 +6,6 @@ import { MENU_TYPE_ENUM } from '/@/constants/system/menu-const';
 import { messageApi } from '/@/api/support/message-api';
 import { smartSentry } from '/@/lib/smart-sentry';
 import { localRead, localSave, localRemove } from '/@/utils/local-util';
-
 
 export const useUserStore = defineStore({
   id: 'userStore',

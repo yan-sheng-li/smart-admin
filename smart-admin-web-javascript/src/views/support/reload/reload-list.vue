@@ -1,12 +1,3 @@
-<!--
-  * reload
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card size="small" :bordered="false" :hoverable="true">
     <a-alert>
@@ -16,7 +7,6 @@
       <template v-slot:description>
         <pre>
 简介：SmartReload是一个可以在不重启进程的情况下动态重新加载配置或者执行某些预先设置的代码。
-
 原理：
 - Java后端会在项目启动的时候开启一个Daemon线程，这个Daemon线程会每隔几秒轮询t_smart_item表的状态。
 - 如果【状态标识】与【上次状态标识】比较发生变化，会将参数传入SmartReload实现类，进行自定义操作。

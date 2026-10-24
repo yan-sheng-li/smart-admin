@@ -1,13 +1,3 @@
-<!--
-  * 角色 设置
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-12 22:34:00 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
-  *
--->
 <template>
   <a-card class="role-container">
     <a-tabs v-model:activeKey="activeKey">
@@ -28,7 +18,6 @@
   import RoleDataScope from '../role-data-scope/index.vue';
   import RoleEmployeeList from '../role-employee-list/index.vue';
   import RoleTree from '../role-tree/index.vue';
-
   defineProps({
     value: Number,
   });

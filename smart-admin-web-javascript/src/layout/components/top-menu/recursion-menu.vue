@@ -1,12 +1,3 @@
-<!--
-  * 顶部菜单-递归菜单
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-06 20:29:12 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-menu
     v-model:openKeys="openKeys"
@@ -40,7 +31,6 @@
   import { router } from '/@/router/index';
   import { useAppConfigStore } from '/@/store/modules/system/app-config';
   import { useUserStore } from '/@/store/modules/system/user';
-
   const theme = computed(() => useAppConfigStore().$state.sideMenuTheme);
 
   const menuTree = computed(() => useUserStore().getMenuTree || []);

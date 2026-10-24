@@ -1,13 +1,3 @@
-<!--
-  * 角色 员工 列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 22:34:00
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div>
     <div class="header">
@@ -17,7 +7,6 @@
         <a-button class="button-style" v-if="selectRoleId" type="primary" @click="onSearch">搜索</a-button>
         <a-button class="button-style" v-if="selectRoleId" type="default" @click="resetQueryRoleEmployee">重置</a-button>
       </div>
-
       <div>
         <a-button class="button-style" v-if="selectRoleId" type="primary" @click="addRoleEmployee" v-privilege="'system:role:employee:add'"
           >添加员工</a-button

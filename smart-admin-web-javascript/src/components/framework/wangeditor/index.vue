@@ -1,13 +1,3 @@
-<!--
-  * 编辑器
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 15:34:33
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div style="border: 1px solid #ccc">
     <Toolbar style="border-bottom: 1px solid #ccc" :editor="editorRef" />
@@ -28,7 +18,6 @@
   import '@wangeditor-next/editor/dist/css/style.css';
   import { Editor, Toolbar } from '@wangeditor-next/editor-for-vue';
   import { smartSentry } from '/@/lib/smart-sentry';
-
   //菜单
   const editorConfig = { MENU_CONF: {} };
 

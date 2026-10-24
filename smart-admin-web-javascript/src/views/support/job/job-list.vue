@@ -1,8 +1,3 @@
-<!--
-  * JOB 列表
-  * @Author:    huke
-  * @Date:      2024/06/25
--->
 <template>
   <div>
     <a-card size="small" :bordered="false" :hoverable="true">
@@ -26,7 +21,6 @@
                   <a-select-option :key="0"> 停止 </a-select-option>
                 </a-select>
               </a-form-item>
-
               <a-form-item class="smart-query-form-item smart-margin-left10">
                 <a-button-group>
                   <a-button type="primary" @click="onSearch" v-privilege="'support:job:query'">

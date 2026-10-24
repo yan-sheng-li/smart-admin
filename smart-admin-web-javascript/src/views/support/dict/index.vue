@@ -1,12 +1,3 @@
-<!--
-  * 数据 字典
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2025-03-26 21:50:41
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-form class="smart-query-form">
     <a-row class="smart-query-form-row">
@@ -34,7 +25,6 @@
       </a-form-item>
     </a-row>
   </a-form>
-
   <a-card size="small" :bordered="false" :hoverable="true">
     <a-row class="smart-table-btn-block">
       <div class="smart-table-operate-block">

@@ -1,10 +1,3 @@
-<!--
-  * 文件
-  *
-  * @Author:    1024创新实验室-主任-卓大
-  * @Date:      2020-10-10 22:13:18
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <!---------- 查询表单form begin ----------->
   <a-form class="smart-query-form" v-privilege="'support:file:query'">
@@ -46,7 +39,6 @@
     </a-row>
   </a-form>
   <!---------- 查询表单form end ----------->
-
   <a-card size="small" :bordered="false" :hoverable="true">
     <!---------- 表格操作行 begin ----------->
     <a-row class="smart-table-btn-block">

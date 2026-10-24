@@ -1,12 +1,3 @@
-<!--
-  * 操作记录 列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-02 20:23:08
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-form class="smart-query-form" v-privilege="'support:operateLog:query'">
     <a-row class="smart-query-form-row">
@@ -19,7 +10,6 @@
       <a-form-item label="用户名称" class="smart-query-form-item">
         <a-input style="width: 100px" v-model:value="queryForm.userName" placeholder="用户名称" />
       </a-form-item>
-
       <a-form-item label="请求时间" class="smart-query-form-item">
         <a-range-picker @change="changeCreateDate" v-model:value="createDateRange" :presets="defaultChooseTimeRange" style="width: 240px" />
       </a-form-item>

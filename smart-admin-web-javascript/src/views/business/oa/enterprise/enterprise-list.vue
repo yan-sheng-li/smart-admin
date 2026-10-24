@@ -1,19 +1,9 @@
-<!--
-  * 公司列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-15 20:15:49
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-form class="smart-query-form" v-privilege="'oa:enterprise:query'">
     <a-row class="smart-query-form-row">
       <a-form-item label="关键字" class="smart-query-form-item">
         <a-input style="width: 300px" v-model:value="queryForm.keywords" placeholder="企业名称/联系人/联系电话" />
       </a-form-item>
-
       <a-form-item label="创建时间" class="smart-query-form-item">
         <a-space direction="vertical" :size="12">
           <a-range-picker v-model:value="searchDate" :presets="defaultTimeRanges" @change="dateChange" />

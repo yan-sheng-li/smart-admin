@@ -1,12 +1,3 @@
-<!--
-  * 代码生成 查询条件
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-22 21:50:41 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-row>
     <a-button type="primary" @click="addQuery">添加查询条件</a-button>
@@ -28,7 +19,6 @@
           <template #icon> <drag-outlined /> </template>
         </a-button>
       </template>
-
       <template v-if="column.dataIndex === 'label'">
         <a-input v-model:value="record.label" placeholder="关键字查询" />
       </template>

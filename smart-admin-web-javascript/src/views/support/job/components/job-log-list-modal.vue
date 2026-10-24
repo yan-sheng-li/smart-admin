@@ -1,8 +1,3 @@
-<!--
-  * job log列表
-  * @Author:    huke
-  * @Date:      2024/06/25
--->
 <template>
   <a-drawer v-model:open="showFlag" :width="1100" :title="title" placement="right" :destroyOnClose="true">
     <a-form class="smart-query-form">
@@ -21,7 +16,6 @@
             <a-range-picker v-model:value="searchDate" style="width: 220px" :presets="defaultTimeRanges" @change="dateChange" />
           </a-space>
         </a-form-item>
-
         <a-form-item class="smart-query-form-item smart-margin-left10">
           <a-button-group>
             <a-button type="primary" @click="onSearch">

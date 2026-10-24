@@ -1,13 +1,3 @@
-<!---
-  * 字段 下拉选择框
-  *
-  * @Author:    1024创新实验室：罗伊
-  * @Date:      2022-09-12 22:06:45
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div>
     <a-select
@@ -26,7 +16,6 @@
     </a-select>
   </div>
 </template>
-
 <script setup>
   import { computed, ref, watch } from 'vue';
   import { useDictStore } from '/@/store/modules/system/dict';

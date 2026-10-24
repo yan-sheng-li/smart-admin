@@ -1,14 +1,4 @@
-/* 
-  * OA发票信息
-  * 
-  * @Author:    善逸 
-  * @Date:      2022-09-03 21:48:54 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
-  */
 import { postRequest, getRequest } from '/@/lib/axios';
-
 export const invoiceApi = {
 
   // 新建发票信息 @author 善逸

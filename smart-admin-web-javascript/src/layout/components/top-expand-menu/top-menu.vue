@@ -1,12 +1,3 @@
-<!--
-  * 第一列菜单
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-06 20:29:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <div class="top-menu-container">
     <!-- 一级菜单展示 -->
@@ -30,7 +21,6 @@
   import { MENU_TYPE_ENUM } from '/@/constants/system/menu-const';
   import { router } from '/@/router';
   import { useUserStore } from '/@/store/modules/system/user';
-
   import menuEmitter from './top-expand-menu-mitt';
 
   const menuTree = computed(() => useUserStore().getMenuTree || []);

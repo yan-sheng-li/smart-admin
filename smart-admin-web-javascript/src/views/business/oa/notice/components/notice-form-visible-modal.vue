@@ -1,12 +1,3 @@
-<!--
-  * 通知  可见范围
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-08-21 19:52:43 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-modal title="选择部门" v-model:open="visibleFlag" :maskClosable="false" :width="768" @ok="onSubmit" @cancel="onClose">
     <a-tabs v-model:activeKey="activeKey">
@@ -19,7 +10,6 @@
     </a-tabs>
   </a-modal>
 </template>
-
 <script setup>
 import { reactive, ref, onMounted, watch } from 'vue';
 import { NOTICE_VISIBLE_RANGE_DATA_TYPE_ENUM } from '/@/constants/business/oa/notice-const';

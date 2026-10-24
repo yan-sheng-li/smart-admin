@@ -1,12 +1,3 @@
-<!--
-  * 公司 详情
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-08-15 20:15:49
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <div class="smart-detail-header">
     <a-page-header :title="detail.enterpriseName" :avatar="{ src: logo }">
@@ -52,7 +43,6 @@
     <EnterpriseOperate ref="operateRef" @refresh="getDetail" />
   </a-card>
 </template>
-
 <script setup>
   import _ from 'lodash';
   import { computed, onMounted, ref } from 'vue';

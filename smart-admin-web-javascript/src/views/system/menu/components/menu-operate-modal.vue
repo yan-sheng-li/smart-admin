@@ -1,12 +1,3 @@
-<!--
-  * 菜单 表单弹窗
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-12 20:11:39
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-drawer
     :body-style="{ paddingBottom: '80px' }"
@@ -125,7 +116,6 @@
   import { MENU_DEFAULT_PARENT_ID, MENU_PERMS_TYPE_ENUM, MENU_TYPE_ENUM } from '/@/constants/system/menu-const';
   import { smartSentry } from '/@/lib/smart-sentry';
   import { SmartLoading } from '/@/components/framework/smart-loading';
-
   // ----------------------- 以下是字段定义 emits props ------------------------
   // emit
   const emit = defineEmits(['reloadList']);

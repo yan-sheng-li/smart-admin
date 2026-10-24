@@ -1,8 +1,3 @@
-<!--
-  * 已删除的 JOB 列表
-  * @Author:    zhuoda
-  * @Date:      2025/01/05
--->
 <template>
   <div>
     <a-form class="smart-query-form">
@@ -23,7 +18,6 @@
             <a-select-option :key="0"> 停止 </a-select-option>
           </a-select>
         </a-form-item>
-
         <a-form-item class="smart-query-form-item smart-margin-left10">
           <a-button-group>
             <a-button type="primary" @click="onSearch" v-privilege="'support:job:query'">

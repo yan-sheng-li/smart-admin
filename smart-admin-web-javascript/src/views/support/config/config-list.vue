@@ -1,12 +1,3 @@
-<!--
-  * 系统设置 列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-08 21:50:41
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <div>
     <a-form class="smart-query-form">
@@ -14,7 +5,6 @@
         <a-form-item label="参数Key" class="smart-query-form-item">
           <a-input style="width: 300px" v-model:value="queryForm.configKey" placeholder="请输入key" />
         </a-form-item>
-
         <a-form-item class="smart-query-form-item smart-margin-left10">
           <a-button-group>
             <a-button type="primary" @click="onSearch" v-privilege="'support:config:query'">

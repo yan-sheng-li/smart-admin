@@ -1,10 +1,3 @@
-<!--
-  * 接口加密、解密
-  *
-  * @Author:    1024创新实验室-主任-卓大
-  * @Date:      2023-10-17 22:02:37
-  * @Copyright  1024创新实验室
--->
 <template>
   <a-alert closable>
     <template v-slot:message>
@@ -13,7 +6,6 @@
     <template v-slot:description>
       <pre>
 简介：接口加解密分为： 前端请求参数加解密 和 后端返回结果加解密。
-
 - 支持国密SM、AES加密算法。前端修改:/lib/encrypt.js文件，后端：启动 ApiEncryptServiceAesImpl 或者 ApiEncryptServiceSmImpl
 - 前端请看：/lib/encrypt.js、/lib/axios.js  /api/support/api-encrypt/api-encrypt-api.js 等文件
 - 后端请看：@ApiEncrypt 和 @ApiDecrypt 注解，具体请看 sa-common项目中的 net.lab1024.sa.common.module.support.apiencrypt 包
@@ -148,7 +140,7 @@
   //请求参数加密
   const requestEncryptForm = reactive({
     age: 100, // 年龄
-    name: '卓大', //姓名
+    name: '张三', //姓名
   });
 
   // 参数字符串
@@ -172,7 +164,7 @@
 
   const responseEncryptForm = reactive({
     age: 100, // 年龄
-    name: '卓大', //姓名
+    name: '张三', //姓名
   });
 
   const responseEncryptFormStr = ref('');
@@ -190,7 +182,7 @@
 
   const form = reactive({
     age: 100, // 年龄
-    name: '卓大', //姓名
+    name: '张三', //姓名
   });
 
   const formStr = ref('');

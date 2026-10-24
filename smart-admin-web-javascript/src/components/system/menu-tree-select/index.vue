@@ -1,12 +1,3 @@
-<!--
-  * 菜单 树形 下拉选择框
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-01 23:14:49
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-tree-select
     :value="props.value"
@@ -28,7 +19,6 @@
   import { menuApi } from '/@/api/system/menu-api';
   import { buildMenuTableTree } from '/@/views/system/menu/menu-data-handler';
   import { MENU_TYPE_ENUM } from '/@/constants/system/menu-const';
-
   const props = defineProps({
     // 绑定值
     value: Array,

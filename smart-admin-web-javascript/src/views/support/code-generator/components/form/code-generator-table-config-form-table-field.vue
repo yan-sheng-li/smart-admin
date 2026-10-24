@@ -1,12 +1,3 @@
-<!--
-  * 代码生成 列表
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-22 21:50:41 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-alert :closable="true" message="请务必将每一个字段的 “ 字段名词 ” 填写完整！！！" type="success" show-icon>
     <template #icon><smile-outlined /></template>
@@ -25,7 +16,6 @@
       <template v-if="column.dataIndex === 'no'">
         {{ index + 1 }}
       </template>
-
       <template v-if="column.dataIndex === 'showFlag'">
         <a-checkbox v-model:checked="record.showFlag" />
       </template>

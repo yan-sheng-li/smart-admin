@@ -1,10 +1,3 @@
-<!--
-  * 系统更新日志
-  *
-  * @Author:    卓大
-  * @Date:      2022-09-26 14:53:50
-  * @Copyright  1024创新实验室
--->
 <template>
   <!---------- 查询表单form begin ----------->
   <a-form class="smart-query-form" v-privilege="'support:changeLog:query'">
@@ -40,7 +33,6 @@
     </a-row>
   </a-form>
   <!---------- 查询表单form end ----------->
-
   <a-card size="small" :bordered="false" :hoverable="true">
     <!---------- 表格操作行 begin ----------->
     <a-row class="smart-table-btn-block">

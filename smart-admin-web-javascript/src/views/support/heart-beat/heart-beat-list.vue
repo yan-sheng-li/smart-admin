@@ -1,12 +1,3 @@
-<!--
-  * 心跳记录
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-02 20:23:08
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card size="small" :bordered="false" :hoverable="true">
     <a-alert>
@@ -17,7 +8,6 @@
         <pre>
 简介：Smart-Heart-Beat 是心跳服务，用于监测Java应用的状态等其他信息。
 原理：Java后端会在项目启动的时候开启一个线程，每隔一段时间将该应用的IP、进程号更新到数据库t_heart_beat_record表中。
-
 用途：
 1）在各个环境（无论开发、测试、生产）能统一看到所有启动的服务列表；
 2）检测Java应用是否存活；

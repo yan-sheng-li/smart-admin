@@ -1,19 +1,9 @@
-<!--
-  * 操作记录 列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-02 20:23:08
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-form class="smart-query-form">
     <a-row class="smart-query-form-row">
       <a-form-item label="请求时间" class="smart-query-form-item">
         <a-range-picker @change="changeCreateDate" v-model:value="createDateRange" :presets="defaultChooseTimeRange" style="width: 240px" />
       </a-form-item>
-
       <a-form-item label="快速筛选" class="smart-query-form-item">
         <a-radio-group v-model:value="queryForm.successFlag" @change="onSearch">
           <a-radio-button :value="undefined">全部</a-radio-button>

@@ -1,12 +1,3 @@
-<!--
-  * 菜单列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-12 20:11:39
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <div>
     <a-form class="smart-query-form">
@@ -14,7 +5,6 @@
         <a-form-item label="关键字" class="smart-query-form-item">
           <a-input style="width: 300px" v-model:value="queryForm.keywords" placeholder="菜单名称/路由地址/组件路径/权限字符串" />
         </a-form-item>
-
         <a-form-item label="类型" class="smart-query-form-item">
           <SmartEnumSelect width="120px" v-model:value="queryForm.menuType" placeholder="请选择类型" enum-name="MENU_TYPE_ENUM" />
         </a-form-item>

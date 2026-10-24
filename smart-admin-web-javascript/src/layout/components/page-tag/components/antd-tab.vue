@@ -1,12 +1,3 @@
-<!--
-  * 使用ant design <a-tabs> 组件
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-06 20:29:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <!-- 标签页，共两部分：1、标签 ；2、标签操作区 -->
   <a-row style="position: relative" v-show="pageTagFlag">
@@ -30,7 +21,6 @@
         </a-menu>
       </template>
     </a-dropdown>
-
     <a-dropdown>
       <!--标签页操作区-->
       <div class="smart-page-tag-operate">

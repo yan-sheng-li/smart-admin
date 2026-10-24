@@ -1,12 +1,3 @@
-/*
- * 菜单类型
- *
- * @Author:    1024创新实验室-主任：卓大
- * @Date:      2022-09-06 19:57:04
- * @Wechat:    zhuda1024
- * @Email:     lab1024@163.com
- * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
- */
 export const MENU_TYPE_ENUM = {
   CATALOG: {
     value: 1,
@@ -21,7 +12,6 @@ export const MENU_TYPE_ENUM = {
     desc: '功能点',
   },
 };
-
 /**
  * 权限类型
  */

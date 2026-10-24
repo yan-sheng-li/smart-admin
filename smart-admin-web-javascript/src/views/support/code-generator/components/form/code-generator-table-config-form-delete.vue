@@ -1,12 +1,3 @@
-<!--
-  * 代码生成 删除
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-22 21:50:41 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-form ref="formRef" :model="formData" :rules="formRules" :label-col="{ span: 6 }" style="width: 600px">
     <a-form-item label="数据库表名词"> {{ tableInfo.tableName }} </a-form-item>
@@ -32,7 +23,6 @@
     </a-form-item>
   </a-form>
 </template>
-
 <script setup>
   import { message } from 'ant-design-vue';
   import _ from 'lodash';

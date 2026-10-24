@@ -1,19 +1,9 @@
-<!--
-  * 登录、登出 日志
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-06-02 20:23:08
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-form class="smart-query-form" ref="queryFormRef">
     <a-row class="smart-query-form-row">
       <a-form-item label="时间" class="smart-query-form-item">
         <a-range-picker @change="changeCreateDate" v-model:value="createDateRange" :presets="defaultChooseTimeRange" style="width: 240px" />
       </a-form-item>
-
       <a-form-item class="smart-query-form-item smart-margin-left10">
         <a-button-group>
           <a-button type="primary" @click="onSearch">

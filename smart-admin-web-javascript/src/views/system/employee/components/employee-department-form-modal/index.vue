@@ -1,12 +1,3 @@
-<!--
-  * 部门 员工 弹窗
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-08 20:46:18
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-modal v-model:open="visible" title="调整部门" :footer="null" destroyOnClose>
     <DepartmentTree ref="departmentTree" :height="400" :showMenu="false" />
@@ -24,7 +15,6 @@
   import { employeeApi } from '/@/api/system/employee-api';
   import { smartSentry } from '/@/lib/smart-sentry';
   import { SmartLoading } from '/@/components/framework/smart-loading';
-
   // ----------------------- 以下是字段定义 emits props ---------------------
 
   const emit = defineEmits(['refresh']);

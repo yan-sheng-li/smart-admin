@@ -1,13 +1,3 @@
-<!--
-  * 角色 管理
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-12 22:34:00 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
-  *
--->
 <template>
   <div class="height100">
     <a-row :gutter="10" type="flex" class="height100">
@@ -28,7 +18,6 @@
     value: Object,
   });
   defineEmits(['update:value']);
-
   let roleList = ref();
   const selectRoleId = computed(() => {
     if (!roleList.value) {

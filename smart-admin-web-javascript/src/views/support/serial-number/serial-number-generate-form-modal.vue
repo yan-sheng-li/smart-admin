@@ -1,12 +1,3 @@
-<!--
-  * 生成
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-modal :open="visible" title="生成单号" ok-text="生成" cancel-text="关闭" @ok="onSubmit" @cancel="onClose">
     <a-form ref="formRef" :model="form" :rules="rules" :label-col="{ span: 5 }">
@@ -38,7 +29,6 @@
   import { SmartLoading } from '/@/components/framework/smart-loading';
   import _ from 'lodash';
   import { smartSentry } from '/@/lib/smart-sentry';
-
   // emit
   const emit = defineEmits(['refresh']);
   defineExpose({

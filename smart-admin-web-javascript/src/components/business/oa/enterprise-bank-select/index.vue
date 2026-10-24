@@ -1,13 +1,3 @@
-<!--
-  * 公司银行 下拉选择框
-  * 
-  * @Author:    1024创新实验室：开云
-  * @Date:      2022-09-02 22:12:20 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
-  *
--->
 <template>
   <a-select
     v-model:value="selectValue"
@@ -26,7 +16,6 @@
     </a-select-option>
   </a-select>
 </template>
-
 <script setup>
   import { onMounted, ref, watch } from 'vue';
   import { bankApi } from '/@/api/business/oa/bank-api';

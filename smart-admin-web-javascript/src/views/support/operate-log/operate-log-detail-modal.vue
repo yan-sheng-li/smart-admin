@@ -1,12 +1,3 @@
-<!--
-  * 操作记录 详情
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-06-02 20:23:08 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-modal :open="visible" title="请求详情" width="60%" :footer="null" @cancel="close">
     <div class="info-box">
@@ -58,7 +49,6 @@
     </div>
   </a-modal>
 </template>
-
 <script setup>
   import { reactive, ref } from 'vue';
   import { JsonViewer } from 'vue3-json-viewer';

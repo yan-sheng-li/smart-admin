@@ -1,12 +1,3 @@
-<!--
-  * 字典表单 弹窗
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2025-03-08 21:50:41
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-modal :open="visible" :title="form.dictId ? '编辑字典' : '添加字典'" ok-text="确认" cancel-text="取消" @ok="onSubmit" @cancel="onClose">
     <br />
@@ -17,7 +8,6 @@
       <a-form-item label="字典名称" name="dictName">
         <a-input v-model:value="form.dictName" placeholder="请输入名称" />
       </a-form-item>
-
       <a-form-item label="备注" name="remark">
         <a-textarea v-model:value="form.remark" style="width: 100%; height: 100px; outline: none" />
       </a-form-item>

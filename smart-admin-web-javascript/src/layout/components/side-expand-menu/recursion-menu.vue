@@ -1,12 +1,3 @@
-<!--
-  * 递归菜单
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-06 20:29:12 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <div class="recursion-container" v-show="topMenu.children && topMenu.children.length > 0">
     <!-- 顶部顶级菜单名称 -->
@@ -44,7 +35,6 @@
   import menuEmitter from './side-expand-menu-mitt';
   import { useUserStore } from '/@/store/modules/system/user';
   import { theme } from 'ant-design-vue';
-
   // 选中的顶级菜单
   let topMenu = ref({});
   menuEmitter.on('selectTopMenu', onSelectTopMenu);

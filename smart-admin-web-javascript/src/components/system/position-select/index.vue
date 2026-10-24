@@ -1,12 +1,3 @@
-<!--
-  * 职位
-  *
-  * @Author:    开云
-  * @Date:      2024-06-27 23:09:02
-  * @Wechat:    kaiyun
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-select
     v-model:value="selectValue"
@@ -22,7 +13,6 @@
     </a-select-option>
   </a-select>
 </template>
-
 <script setup>
   import { onMounted, ref, watch } from 'vue';
   import { smartSentry } from '/@/lib/smart-sentry';

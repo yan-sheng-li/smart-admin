@@ -1,8 +1,3 @@
-<!--
-  * JOB 表单
-  * @Author:    huke
-  * @Date:      2024/06/29
--->
 <template>
   <div>
     <!-- 编辑 -->
@@ -79,7 +74,6 @@
         </a-form-item>
       </a-form>
     </a-modal>
-
     <!-- 立即执行 -->
     <a-modal
         :open="executeModalShow"

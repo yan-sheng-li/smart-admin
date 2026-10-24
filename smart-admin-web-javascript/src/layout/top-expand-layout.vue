@@ -1,12 +1,3 @@
-<!--
-  *  展开菜单模式
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-06 20:40:16 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-layout class="admin-layout" style="min-height: 100%">
     <!-- 侧边菜单 side-menu -->
@@ -14,7 +5,6 @@
       <!-- 左侧菜单 -->
       <TopExpandMenu :collapsed="collapsed" />
     </a-layout-sider>
-
     <!--中间内容，一共三部分：1、顶部;2、中间内容区域;3、底部（一般是公司版权信息）;-->
     <a-layout class="admin-layout-main" :style="`height: ${windowHeight}px`" id="smartAdminMain">
       <!-- 顶部头部信息 -->

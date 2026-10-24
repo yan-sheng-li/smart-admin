@@ -1,12 +1,3 @@
-<!--
-  * reload 结果
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-modal :open="visible" title="reload结果列表" width="60%" :footer="null" @cancel="onClose">
     <a-button type="primary" @click="ajaxQuery" size="small">
@@ -36,7 +27,6 @@ import { smartSentry } from '/@/lib/smart-sentry';
   defineExpose({
     showModal,
   });
-
   // ----------------------- 表单 隐藏 与 显示 ------------------------
   // 是否展示
   const visible = ref(false);

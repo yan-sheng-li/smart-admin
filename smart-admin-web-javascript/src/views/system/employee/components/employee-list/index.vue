@@ -1,12 +1,3 @@
-<!--
-  *  员工 列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-08 20:46:18
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card class="employee-container">
     <div class="header">
@@ -39,7 +30,6 @@
       <a-button class="btn" type="primary" @click="showDrawer" v-privilege="'system:employee:add'">添加成员</a-button>
       <a-button class="btn" @click="updateEmployeeDepartment" v-privilege="'system:employee:department:update'">调整部门</a-button>
       <a-button class="btn" @click="batchDelete" v-privilege="'system:employee:delete'">批量删除</a-button>
-
       <span class="smart-table-column-operate">
         <TableOperator v-model="columns" :tableId="TABLE_ID_CONST.SYSTEM.EMPLOYEE" :refresh="queryEmployee" />
       </span>

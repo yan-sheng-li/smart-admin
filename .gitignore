@@ -23,3 +23,7 @@ target/
 **/node_modules
 **/.vscode
 
+
+### tooling ###
+.codegraph/
+.task-evidence/

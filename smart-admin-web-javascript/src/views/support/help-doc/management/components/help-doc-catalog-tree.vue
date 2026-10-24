@@ -1,12 +1,3 @@
-<!--
-  * 目录树
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card class="tree-container" size="small">
     <a-row>
@@ -77,7 +68,6 @@
   import { SmartLoading } from '/@/components/framework/smart-loading';
   import helpDocCatalogEmitter from '../help-doc-mitt';
   import { smartSentry } from '/@/lib/smart-sentry';
-
   const HELP_DOC_CATALOG_PARENT_ID = 0;
 
   // ----------------------- 组件参数 ---------------------

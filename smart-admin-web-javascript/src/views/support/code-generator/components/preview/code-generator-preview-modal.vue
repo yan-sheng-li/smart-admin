@@ -1,12 +1,3 @@
-<!--
-  * 代码生成 预览代码
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-22 21:50:41
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-drawer
     title="代码预览"
@@ -24,7 +15,6 @@
         <a-radio-button :value="LANGUAGE_LIST[1]">TypeScript代码</a-radio-button>
         <a-radio-button :value="LANGUAGE_LIST[2]">Java代码</a-radio-button>
       </a-radio-group>
-
       <a-button type="link" @click="download" danger size="small"><strong>下载代码</strong></a-button>
     </a-row>
     <a-tabs v-model:activeKey="fileKey" size="small" @change="onChangeTab">

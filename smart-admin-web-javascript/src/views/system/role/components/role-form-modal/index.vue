@@ -1,13 +1,3 @@
-<!--
-  * 角色 表单
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 22:34:00
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <a-modal :title="form.roleId ? '编辑角色' : '添加角色'" :width="600" :open="modalVisible" @cancel="onClose" :footer="null">
     <a-form ref="formRef" :model="form" :rules="rules" :labelCol="{ span: 4 }">
@@ -21,7 +11,6 @@
         <a-input style="width: 100%" placeholder="请输入角色备注" v-model:value="form.remark" />
       </a-form-item>
     </a-form>
-
     <div class="footer">
       <a-button style="margin-right: 8px" @click="onClose">取消</a-button>
       <a-button type="primary" @click="submitForm">提交</a-button>

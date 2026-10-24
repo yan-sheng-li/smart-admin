@@ -1,10 +1,3 @@
-<!--
-  * 登录失败锁定
-  *
-  * @Author:    1024创新实验室-主任-卓大
-  * @Date:      2023-10-17 18:02:37
-  * @Copyright  1024创新实验室
--->
 <template>
   <!---------- 查询表单form begin ----------->
   <a-form class="smart-query-form">
@@ -46,7 +39,6 @@
     </a-row>
   </a-form>
   <!---------- 查询表单form end ----------->
-
   <a-card size="small" :bordered="false" :hoverable="true">
     <!---------- 表格操作行 begin ----------->
     <a-row class="smart-table-btn-block">

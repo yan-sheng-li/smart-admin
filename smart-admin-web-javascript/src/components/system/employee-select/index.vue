@@ -1,12 +1,3 @@
-<!--
-  * 员工下拉选择框
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 15:09:02
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-select
     v-model:value="selectValue"
@@ -23,7 +14,6 @@
     </a-select-option>
   </a-select>
 </template>
-
 <script setup>
   import { onMounted, ref, watch } from 'vue';
   import { employeeApi } from '/@/api/system/employee-api';

@@ -1,12 +1,3 @@
-<!--
-  * 单号
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-card size="small" :bordered="false" :hoverable="true">
     <a-alert>
@@ -23,7 +14,6 @@
         <div style="color:red">系统默认使用“内存锁”类型，若修改，请将后端代码 @Service 注解加到对应的实现类上：SerialNumberInternService、SerialNumberMysqlService、SerialNumberRedisService</div>
       </template>
     </a-alert>
-
     <a-row justify="end">
       <TableOperator
         class="smart-margin-bottom5 smart-margin-top5"

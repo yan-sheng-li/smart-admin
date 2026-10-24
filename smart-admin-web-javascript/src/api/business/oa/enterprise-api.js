@@ -1,14 +1,4 @@
-/*
- * 企业信息
- *
- * @Author:    开云
- * @Date:      2022-09-03 21:47:28
- * @Wechat:    zhuda1024
- * @Email:     lab1024@163.com
- * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
- */
 import {postRequest, getRequest, postDownload} from '/@/lib/axios';
-
 export const enterpriseApi = {
     // 新建企业 @author 开云
     create: (param) => {
@@ -30,7 +20,7 @@ export const enterpriseApi = {
         return postRequest('/oa/enterprise/page/query', param);
     },
 
-    // 导出企业数据excel @author 卓大
+    // 导出企业数据excel 
     exportExcel: (param) => {
         return postDownload('/oa/enterprise/exportExcel', param);
     },
@@ -52,7 +42,7 @@ export const enterpriseApi = {
     employeeList: (param) => {
         return postRequest('/oa/enterprise/employee/list', param);
     },
-    // 分页查询企业员工List @author 卓大
+    // 分页查询企业员工List 
     queryPageEmployeeList: (param) => {
         return postRequest('/oa/enterprise/employee/queryPage', param);
     },

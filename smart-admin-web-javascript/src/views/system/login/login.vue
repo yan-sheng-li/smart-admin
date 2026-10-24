@@ -1,56 +1,11 @@
-<!--
-  * 登录
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 22:34:00
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div class="login-container">
     <div class="box-item desc">
       <div class="welcome">
         <p>欢迎登录 SmartAdmin V3</p>
         <p class="desc">
-          SmartAdmin 是由 河南·洛阳
-          <a target="_blank" href="https://www.1024lab.net" style="color: white; weight: bolder; font-size: 15px; text-decoration: underline"
-            >1024创新实验室（1024Lab）</a
-          >
-          基于SpringBoot + Sa-Token + Mybatis-Plus 和 Vue3 + Vite5 + Ant Design Vue 4 (同时支持JavaScript和TypeScript双版本)
-          以「高质量代码」为核心，「简洁、高效、安全」的快速开发平台。
-          <br />
-          <br />
-          <span class="setence">
-            致伟大的开发者 ：
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;我们希望用一套漂亮优雅的代码和一套整洁高效的代码规范，让大家在这浮躁的世界里感受到一股把代码写好的清流 !
-            <br />
-            保持谦逊，保持学习，热爱代码，更热爱生活 !<br />
-            永远年轻，永远前行 !<br />
-            <span class="author">
-              <a target="_blank" href="https://zhuoda.vip" style="color: white; font-size: 13px; text-decoration: underline">
-                1024创新实验室-主任：卓大
-              </a>
-            </span>
-          </span>
+          基于 SpringBoot + Sa-Token + Mybatis-Plus 与 Vue3 + Vite5 + Ant Design Vue 4 的快速开发平台。
         </p>
-      </div>
-      <div class="app-qr-box">
-        <div class="app-qr">
-          <img :src="zhuoda" />
-          <span class="qr-desc"> 加微信，骚扰卓大 :) </span>
-        </div>
-        <div class="app-qr">
-          <img :src="gzh" />
-          <div class="qr-desc-marquee">
-            <div class="marquee">
-              <span>关注：六边形工程师</span>
-              <span>分享：AI、赚钱、代码、健康</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="box-item login">
@@ -69,21 +24,12 @@
           </a-input-group>
         </a-form-item>
         <a-form-item name="password">
-          <a-popover placement="top">
-            <template #content>
-              <a-flex :vertical="true" justify="center" align="center">
-               <img :src="gzh" />
-               <a-typography-text type="danger">扫码关注：【六边形工程师】</a-typography-text>
-               <a-typography-text type="danger">完成问卷调查，获取登录密码</a-typography-text>
-              </a-flex>
-            </template>
-            <a-input-password
-              v-model:value="loginForm.password"
-              autocomplete="on"
-              :type="showPassword ? 'text' : 'password'"
-              placeholder="请输入密码"
-            />
-          </a-popover>
+          <a-input-password
+            v-model:value="loginForm.password"
+            autocomplete="on"
+            :type="showPassword ? 'text' : 'password'"
+            placeholder="请输入密码"
+          />
         </a-form-item>
         <a-form-item name="captchaCode">
           <a-input class="captcha-input" v-model:value.trim="loginForm.captchaCode" placeholder="请输入验证码" />
@@ -94,51 +40,25 @@
           <div class="btn" @click="onLogin">登录</div>
         </a-form-item>
         <a-form-item>
-          <span>  账号：admin, 关注【六边形工程师】，参与问卷，获取密码</span>
+          <span>  账号：admin</span>
         </a-form-item>
       </a-form>
-      <div class="more">
-        <div class="title-box">
-          <p class="line"></p>
-          <p class="title">其他方式登录</p>
-          <p class="line"></p>
-        </div>
-        <div class="login-type">
-          <img :src="wechatIcon" />
-          <img :src="aliIcon" />
-          <img :src="douyinIcon" />
-          <img :src="qqIcon" />
-          <img :src="weiboIcon" />
-          <img :src="feishuIcon" />
-          <img :src="googleIcon" />
-        </div>
-      </div>
     </div>
   </div>
 </template>
 <script setup>
-  import { message, notification, Button } from 'ant-design-vue';
+  import { message } from 'ant-design-vue';
   import { onMounted, onUnmounted, reactive, ref } from 'vue';
   import { useRouter } from 'vue-router';
   import { loginApi } from '/@/api/system/login-api';
   import { SmartLoading } from '/@/components/framework/smart-loading';
   import { LOGIN_DEVICE_ENUM } from '/@/constants/system/login-device-const';
   import { useUserStore } from '/@/store/modules/system/user';
-  import zhuoda from '/@/assets/images/1024lab/zhuoda-wechat.jpg';
   import loginQR from '/@/assets/images/login/login-qr.png';
-  import gzh from '/@/assets/images/1024lab/gzh.jpg';
-  import wechatIcon from '/@/assets/images/login/wechat-icon.png';
-  import aliIcon from '/@/assets/images/login/ali-icon.png';
-  import douyinIcon from '/@/assets/images/login/douyin-icon.png';
-  import qqIcon from '/@/assets/images/login/qq-icon.png';
-  import weiboIcon from '/@/assets/images/login/weibo-icon.png';
-  import feishuIcon from '/@/assets/images/login/feishu-icon.png';
-  import googleIcon from '/@/assets/images/login/google-icon.png';
 
   import { buildRoutes } from '/@/router/index';
   import { smartSentry } from '/@/lib/smart-sentry';
   import { encryptData } from '/@/lib/encrypt';
-  import { h } from 'vue';
   import { localSave } from '/@/utils/local-util';
   import LocalStorageKeyConst from '/@/constants/local-storage-key-const';
   import { useDictStore } from '/@/store/modules/system/dict';
@@ -162,7 +82,6 @@
   const showPassword = ref(false);
   const router = useRouter();
   const formRef = ref();
-  const rememberPwd = ref(false);
 
   onMounted(() => {
     document.onkeyup = (e) => {
@@ -170,25 +89,6 @@
         onLogin();
       }
     };
-
-    notification['success']({
-      message: '温馨提示',
-      description: 'SmartAdmin 提供 9种 登录背景风格哦！',
-      duration: 8,
-      onClick: () => {},
-      btn: () =>
-        h(
-          Button,
-          {
-            type: 'primary',
-            target: '_blank',
-            size: 'small',
-            href: 'https://smartadmin.vip/views/doc/front/Login.html',
-            onClick: () => {},
-          },
-          { default: () => '去看看' }
-        ),
-    });
   });
 
   onUnmounted(() => {
@@ -283,7 +183,7 @@
       } else {
         clearInterval(countDownTimer);
         emailCodeButtonDisabled.value = false;
-        emailCodeTips.value = '获取验证码';
+        emailCodeTips.value = '获取邮箱验证码';
       }
     }, 1000);
   }

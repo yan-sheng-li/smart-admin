@@ -1,12 +1,3 @@
-<!--
-  *  员工 表单 弹窗
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-08-08 20:46:18
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-drawer
     :title="form.employeeId ? '编辑' : '添加'"
@@ -47,7 +38,6 @@
       <a-form-item label="职务" name="positionId">
         <PositionSelect v-model:value="form.positionId" placeholder="请选择职务" />
       </a-form-item>
-
       <a-form-item label="角色" name="roleIdList">
         <a-select mode="multiple" v-model:value="form.roleIdList" optionFilterProp="title" placeholder="请选择角色">
           <a-select-option v-for="item in roleList" :key="item.roleId" :title="item.roleName">{{ item.roleName }}</a-select-option>

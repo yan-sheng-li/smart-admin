@@ -1,12 +1,3 @@
-<!--
-  * 数据变更记录，以 timeline 形式显示
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-08-12 21:01:52 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-timeline>
     <a-timeline-item v-for="record in tableData" :key="record.dataTracerId">
@@ -29,7 +20,6 @@
       type: Array,
     },
   });
-
   const emit = defineEmits(['showDetail']);
   function showDetail(record) {
     emit('showDetail', record);

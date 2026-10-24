@@ -1,13 +1,3 @@
-<!--
-  * 文件上传
-  *
-  * @Author:    1024创新实验室：善逸
-  * @Date:      2022-08-12 20:19:39
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div class="clearfix">
     <a-upload
@@ -93,7 +83,6 @@
       default: 'picture-card',
     },
   });
-
   // 图片类型的后缀名
   const imgFileType = ['jpg', 'jpeg', 'png', 'gif'];
 

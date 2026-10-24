@@ -1,12 +1,3 @@
-<!--
-  *  帮助文档 layout
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-06 20:40:16
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <!--
       中间内容，一共三部分：
@@ -41,7 +32,6 @@
           </div>
         </div>
       </a-layout-sider>
-
       <!--中间内容-->
       <a-layout-content id="smartAdminLayoutContent" class="help-doc-layout-content">
         <router-view v-slot="{ Component }">

@@ -1,10 +1,3 @@
-<!--
-  * 职务表
-  *
-  * @Author:    kaiyun
-  * @Date:      2024-06-23 23:31:38
-  * @Copyright  <a href="https://1024lab.net">1024创新实验室</a>
--->
 <template>
   <a-modal
       :title="form.positionId ? '编辑' : '添加'"
@@ -29,7 +22,6 @@
         <a-input style="width: 100%" v-model:value="form.remark" placeholder="备注" />
       </a-form-item>
     </a-form>
-
     <template #footer>
       <a-space>
         <a-button @click="onClose">取消</a-button>

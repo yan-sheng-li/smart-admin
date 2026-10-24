@@ -1,12 +1,3 @@
-<!--
-  * 图标 选择
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-01 23:14:49
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <div>
     <a-popover v-model:open="visible" placement="bottomLeft" trigger="click">
@@ -22,7 +13,6 @@
           <a-input-search v-model:value="searchValue" placeholder="输入英文关键词进行搜索" @change="updateSelectIconArray" />
         </a-form-item>
       </template>
-
       <template #content>
         <div class="icon-box">
           <div v-for="item in iconLoopArray" :key="item" @click="handleClick(item)" class="icon-content">

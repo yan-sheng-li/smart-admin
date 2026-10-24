@@ -1,12 +1,3 @@
-<!--
-  * 展开菜单
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-06 20:29:12 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <div class="menu-container">
     <!-- 顶部导航：取自菜单管理中第一级菜单，建议一级菜单都设为目录 -->
@@ -21,7 +12,6 @@ import { useRoute } from 'vue-router';
 import RecursionMenu from './recursion-menu.vue';
 import TopMenu from './top-menu.vue';
 import { useUserStore } from '/@/store/modules/system/user';
-
 const props = defineProps({
   placeholder: {
     type: String,

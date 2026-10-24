@@ -1,13 +1,3 @@
-<!--
-  * 角色
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 22:34:00
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div style="overflow: auto">
     <a-checkbox-group v-model:value="checkedData">
@@ -25,7 +15,6 @@
   import { ref, watch } from 'vue';
   import { useRoleStore } from '/@/store/modules/system/role';
   import RoleTreeMenu from './role-tree-menu.vue';
-
   let props = defineProps({
     tree: {
       type: Array,

@@ -1,12 +1,3 @@
-<!--
-  * 代码生成 配置信息
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-22 21:50:41
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <a-alert
     :closable="true"
@@ -134,7 +125,6 @@
     </a-col>
   </a-row>
 </template>
-
 <script setup>
   import { message, theme } from 'ant-design-vue';
   import dayjs from 'dayjs';

@@ -1,12 +1,3 @@
-<!--
-  * 通知  详情
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-08-21 19:52:43 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-card style="margin-bottom: 15px" size="small">
     <a-descriptions :title="noticeDetail.title" :column="4" size="small">
@@ -38,7 +29,6 @@
       </a-descriptions-item>
     </a-descriptions>
   </a-card>
-
   <a-card size="small">
     <a-tabs v-model:activeKey="activeKey" size="small">
       <a-tab-pane :key="1" tab="内容">

@@ -1,13 +1,3 @@
-<!--
-  * 登录
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 22:34:00
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <div class="login-container">
     <div class="box-item desc">
@@ -86,7 +76,6 @@
   import weiboIcon from '/@/assets/images/login/weibo-icon.png';
   import feishuIcon from '/@/assets/images/login/feishu-icon.png';
   import googleIcon from '/@/assets/images/login/google-icon.png';
-
   import { buildRoutes } from '/@/router/index';
   import { smartSentry } from '/@/lib/smart-sentry';
   import { encryptData } from '/@/lib/encrypt';

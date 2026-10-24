@@ -1,13 +1,3 @@
-<!--
-  * 角色 列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-09-12 22:34:00
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
-  *
--->
 <template>
   <a-card title="角色列表" class="role-container" style="padding: 0">
     <template #extra>
@@ -37,7 +27,6 @@
   import { SmartLoading } from '/@/components/framework/smart-loading';
   import RoleFormModal from '../role-form-modal/index.vue';
   import { smartSentry } from '/@/lib/smart-sentry';
-
   // ----------------------- 角色列表显示 ---------------------
   const roleList = ref([]);
 

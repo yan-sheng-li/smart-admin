@@ -1,10 +1,3 @@
-<!--
-  * 系统更新日志
-  *
-  * @Author:    卓大
-  * @Date:      2022-09-26 14:53:50
-  * @Copyright  1024创新实验室
--->
 <template>
   <a-modal
     :title="form.changeLogId ? '编辑' : '添加'"
@@ -36,7 +29,6 @@
         <a-textarea style="width: 100%" :rows="15"  v-model:value="form.content" placeholder="更新内容" />
       </a-form-item>
     </a-form>
-
     <template #footer>
       <a-space>
         <a-button @click="onClose">取消</a-button>

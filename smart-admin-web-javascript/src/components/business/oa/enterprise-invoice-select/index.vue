@@ -1,12 +1,3 @@
-<!--
-  * 公司的开票信息 下拉选择框
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-09-01 23:14:49 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-select
     v-model:value="selectValue"
@@ -25,7 +16,6 @@
     </a-select-option>
   </a-select>
 </template>
-
 <script setup>
   import { onMounted, ref, watch } from 'vue';
   import { invoiceApi } from '/@/api/business/oa/invoice-api';

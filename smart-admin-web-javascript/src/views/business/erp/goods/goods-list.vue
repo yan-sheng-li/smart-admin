@@ -1,12 +1,3 @@
-<!--
-  * 商品列表
-  *
-  * @Author:    1024创新实验室-主任：卓大
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024
-  * @Email:     lab1024@163.com
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
--->
 <template>
   <!---------- 查询表单form begin ----------->
   <a-form class="smart-query-form">
@@ -19,7 +10,6 @@
           :categoryType="CATEGORY_TYPE_ENUM.GOODS.value"
         />
       </a-form-item>
-
       <a-form-item label="商品名称" class="smart-query-form-item">
         <a-input style="width: 200px" v-model:value="queryForm.searchWord" placeholder="商品名称" />
       </a-form-item>
@@ -448,7 +438,8 @@
   }
 
   function downloadExcel() {
-    window.open('https://smartadmin.vip/cdn/%E5%95%86%E5%93%81%E6%A8%A1%E6%9D%BF.xls');
+    // shortcut: 商品模板下载，替换为本地或自有 CDN 资源
+    message.warning('请联系管理员获取商品导入模板');
   }
 
   async function onImportGoods() {

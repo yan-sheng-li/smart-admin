@@ -1,12 +1,3 @@
-<!--
-  * 意见反馈
-  * 
-  * @Author:    1024创新实验室：开云
-  * @Date:      2022-07-21 21:55:12
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <a-form class="smart-query-form">
     <a-row class="smart-query-form-row">
@@ -40,7 +31,6 @@
       </a-form-item>
     </a-row>
   </a-form>
-
   <a-card size="small">
     <a-table rowKey="feedbackId" :dataSource="tableData" :columns="tableColumns" :pagination="false" :loading="tableLoading" size="small" bordered>
       <template #bodyCell="{ text, column }">

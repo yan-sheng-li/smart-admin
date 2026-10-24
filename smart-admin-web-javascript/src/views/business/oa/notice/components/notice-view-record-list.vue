@@ -1,12 +1,3 @@
-<!--
-  * 通知  查看记录
-  * 
-  * @Author:    1024创新实验室-主任：卓大 
-  * @Date:      2022-08-21 19:52:43 
-  * @Wechat:    zhuda1024 
-  * @Email:     lab1024@163.com 
-  * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012 
--->
 <template>
   <div>
     <a-form class="smart-query-form">
@@ -64,7 +55,6 @@
   import { PAGE_SIZE, PAGE_SIZE_OPTIONS } from '/@/constants/common-const';
   import DepartmentTreeSelect from '/@/components/system/department-tree-select/index.vue';
   import uaparser from 'ua-parser-js';
-
   const props = defineProps({
     noticeId: {
       type: [Number, String],
