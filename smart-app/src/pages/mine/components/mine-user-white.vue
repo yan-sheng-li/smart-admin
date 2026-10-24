@@ -1,7 +1,7 @@
 <template>
   <view class="user-info-box">
     <view class="user-icon">
-      <image class="user-image" src="https://img.smartadmin.1024lab.net/hexagon/logo.png"> </image>
+      <image class="user-image" src="/static/logo.png"> </image>
     </view>
     <view class="user-info">
       <view class="user-name">{{ actualName }}</view>

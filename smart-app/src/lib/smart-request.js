@@ -1,17 +1,7 @@
-/*
- *  ajax请求
- *
- * @Author:    1024创新实验室-主任：卓大
- * @Date:      2022-09-06 20:46:03
- * @Wechat:    zhuda1024
- * @Email:     lab1024@163.com
- * @Copyright  1024创新实验室 （ https://1024lab.net ），Since 2012
- */
 import { USER_TOKEN } from '@/constants/local-storage-key-const';
 import { DATA_TYPE_ENUM } from '@/constants/common-const';
 import { decryptData, encryptData } from './encrypt';
 import { useUserStore } from '@/store/modules/system/user';
-
 const baseUrl = import.meta.env.VITE_APP_API_URL;
 
 function getUserToken() {

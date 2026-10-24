@@ -1,10 +1,3 @@
-/*
- * @Description: file content
- * @Author: yandy
- * @Date: 2022-07-24 21:43:43
- * @LastEditors:
- * @LastEditTime: 2022-07-24 21:43:43
- */
 export const MESSAGE_TYPE_ENUM = {
     MAIL: {
         value: 1,
@@ -15,7 +8,6 @@ export const MESSAGE_TYPE_ENUM = {
         desc: '订单'
     },
   };
-
 
 export const MESSAGE_RECEIVE_TYPE_ENUM = {
     EMPLOYEE: {
