@@ -39,8 +39,8 @@ spring:
   mail:
     host: smtp.163.com
     port: 465
-    username: lab1024@163.com
-    password: LAB1024LAB
+    username: your-email@example.com
+    password: YOUR_SMTP_AUTH_CODE
     test-connection: false
     properties:
       mail:
@@ -104,12 +104,12 @@ file:
     cloud:
       region: oss-cn-hangzhou
       endpoint: https://oss-cn-hangzhou.aliyuncs.com
-      bucket-name: 1024lab-smart-admin
+      bucket-name: your-bucket-name
       access-key:
       secret-key:
       private-url-expire-seconds: 3600
       # 云计算厂商支持公开的文件访问模式；minio默认是不支持的，对于minio用户可以配置为空
-      public-url-prefix: https://1024lab-smart-admin.oss-cn-hangzhou.aliyuncs.com/
+      public-url-prefix: https://your-bucket-name.oss-cn-hangzhou.aliyuncs.com/
 
 # open api配置
 springdoc:

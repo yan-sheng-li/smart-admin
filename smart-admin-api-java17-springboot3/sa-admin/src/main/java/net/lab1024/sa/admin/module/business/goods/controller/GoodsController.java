@@ -39,35 +39,35 @@ public class GoodsController {
     @Resource
     private GoodsService goodsService;
 
-    @Operation(summary = "分页查询 @author 胡克")
+    @Operation(summary = "分页查询")
     @PostMapping("/goods/query")
     @SaCheckPermission("goods:query")
     public ResponseDTO<PageResult<GoodsVO>> query(@RequestBody @Valid GoodsQueryForm queryForm) {
         return goodsService.query(queryForm);
     }
 
-    @Operation(summary = "添加商品 @author 胡克")
+    @Operation(summary = "添加商品")
     @PostMapping("/goods/add")
     @SaCheckPermission("goods:add")
     public ResponseDTO<String> add(@RequestBody @Valid GoodsAddForm addForm) {
         return goodsService.add(addForm);
     }
 
-    @Operation(summary = "更新商品 @author 胡克")
+    @Operation(summary = "更新商品")
     @PostMapping("/goods/update")
     @SaCheckPermission("goods:update")
     public ResponseDTO<String> update(@RequestBody @Valid GoodsUpdateForm updateForm) {
         return goodsService.update(updateForm);
     }
 
-    @Operation(summary = "删除 @author 卓大")
+    @Operation(summary = "删除")
     @GetMapping("/goods/delete/{goodsId}")
     @SaCheckPermission("goods:delete")
     public ResponseDTO<String> delete(@PathVariable Long goodsId) {
         return goodsService.delete(goodsId);
     }
 
-    @Operation(summary = "批量 @author 卓大")
+    @Operation(summary = "批量")
     @PostMapping("/goods/batchDelete")
     @SaCheckPermission("goods:batchDelete")
     public ResponseDTO<String> batchDelete(@RequestBody @Valid ValidateList<Long> idList) {
@@ -76,14 +76,14 @@ public class GoodsController {
 
     // --------------- 导出和导入 -------------------
 
-    @Operation(summary = "导入 @author 卓大")
+    @Operation(summary = "导入")
     @PostMapping("/goods/importGoods")
     @SaCheckPermission("goods:importGoods")
     public ResponseDTO<String> importGoods(@RequestParam MultipartFile file) {
         return goodsService.importGoods(file);
     }
 
-    @Operation(summary = "导出 @author 卓大")
+    @Operation(summary = "导出")
     @GetMapping("/goods/exportGoods")
     @SaCheckPermission("goods:exportGoods")
     public void exportGoods(HttpServletResponse response) throws IOException {

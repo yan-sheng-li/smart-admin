@@ -29,28 +29,28 @@ public class AdminChangeLogController extends SupportBaseController {
     @Resource
     private ChangeLogService changeLogService;
 
-    @Operation(summary = "添加 @author 卓大")
+    @Operation(summary = "添加")
     @PostMapping("/changeLog/add")
     @SaCheckPermission("support:changeLog:add")
     public ResponseDTO<String> add(@RequestBody @Valid ChangeLogAddForm addForm) {
         return changeLogService.add(addForm);
     }
 
-    @Operation(summary = "更新 @author 卓大")
+    @Operation(summary = "更新")
     @PostMapping("/changeLog/update")
     @SaCheckPermission("support:changeLog:update")
     public ResponseDTO<String> update(@RequestBody @Valid ChangeLogUpdateForm updateForm) {
         return changeLogService.update(updateForm);
     }
 
-    @Operation(summary = "批量删除 @author 卓大")
+    @Operation(summary = "批量删除")
     @PostMapping("/changeLog/batchDelete")
     @SaCheckPermission("support:changeLog:batchDelete")
     public ResponseDTO<String> batchDelete(@RequestBody ValidateList<Long> idList) {
         return changeLogService.batchDelete(idList);
     }
 
-    @Operation(summary = "单个删除 @author 卓大")
+    @Operation(summary = "单个删除")
     @GetMapping("/changeLog/delete/{changeLogId}")
     @SaCheckPermission("support:changeLog:delete")
     public ResponseDTO<String> batchDelete(@PathVariable Long changeLogId) {
