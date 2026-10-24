@@ -5,3 +5,6 @@ dist
 dist-ssr
 *.local
 .idea
+
+pnpm-lock.yaml
+pnpm-workspace.yaml
