@@ -83,3 +83,37 @@ pnpm localhost          # 本地联调，指向后端 1024
 - **日志监控**：心跳日志 · 登录日志 · 操作日志（IP/浏览器/OS）
 - **系统**：员工 · 部门 · 角色 · 权限 · 菜单 · 水印 · 文件管理 · 系统参数 · 数据字典 · 单号生成
 - **代码生成**：基于表配置 · 在线预览 · 下载
+
+## 工具脚本
+
+### `auto-deploy-generated-code.ps1` — 一键部署生成代码
+
+代码生成器下载的 zip 默认要手工解压、逐文件复制到对应目录。此脚本自动完成：后端 controller/dao/domain/manager/service、mapper XML、SQL 脚本就位，前端 api/const/views 复制，并自动追加 `constants/index.js` 的 import 与 `table-id-const.js` 的 tableId。
+
+```powershell
+# 默认按 smart-admin 项目根路径部署，模块名取自 zip 内目录名（如 demo）
+./auto-deploy-generated-code.ps1 -zipPath "E:/下载/t_demo_code.zip"
+
+# 自定义项目根路径
+./auto-deploy-generated-code.ps1 -zipPath "<zip>" `
+  -backendRoot "<后端根>" -frontendRoot "<前端根>"
+```
+
+脚本会自动清理空目录（`config`、`mapper`）。运行后仍需手动：执行 `sql/*.sql` 建菜单、重启前后端。
+
+### `rename-pkg.sh` — Java 包名整体迁移
+
+把整个后端的包名从 `OLD` 整体改为 `NEW`，覆盖 java/xml/yml/vm 等文件内的点号与斜杠形态，并迁移物理目录、自检残留。默认 dry-run，加 `--apply` 才真改。
+
+```bash
+# 预览命中（不改文件）
+./rename-pkg.sh net.lab1024 com.example.project smart-admin-api-java17-springboot3
+
+# 确认无误后真改
+./rename-pkg.sh net.lab1024 com.example.project smart-admin-api-java17-springboot3 --apply
+
+# 改完验证
+./rename-pkg.sh net.lab1024 com.example.project smart-admin-api-java17-springboot3 --apply
+```
+
+参数：`<OLD_DOTTED> <NEW_DOTTED> <TARGET_DIR> [--apply]`。`NEW` 段数可与 `OLD` 不同。改完建议 `cd <TARGET> && mvn -q -o compile` 验证。
