@@ -141,7 +141,19 @@ for d in pkg_roots:
     rel_new = new_dir.relative_to(root)
     print(f'  迁移: {rel_old} -> {rel_new}')
     new_dir.parent.mkdir(parents=True, exist_ok=True)
-    shutil.move(str(d), str(new_dir))
+    existed = new_dir.exists()
+    try:
+        shutil.move(str(d), str(new_dir))
+    except OSError as e:
+        # 清理半迁移副本(源未删则保留源)
+        if new_dir.exists() and not existed:
+            shutil.rmtree(str(new_dir), ignore_errors=True)
+        print(  )
+        print(f'ERR: 目录迁移失败(文件被占用): {e}')
+        print(f'  源: {rel_old}')
+        print(  '  原因: 某进程(如 VS Code/IDE)锁着文件')
+        print(  '  处理: 1) 关闭占用进程  2) git restore . 还原文本  3) 重跑')
+        sys.exit(1)
     # 删空壳: 自底向上删 old_parts 各层空目录
     node = d
     for _ in range(len(old_parts)):
