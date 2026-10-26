@@ -27,3 +27,8 @@ target/
 ### tooling ###
 .codegraph/
 .task-evidence/
+
+
+### python ###
+__pycache__/
+*.pyc
