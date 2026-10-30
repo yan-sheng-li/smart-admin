@@ -56,7 +56,7 @@ java -jar sa-admin/target/sa-admin-dev-3.0.0.jar
 ```bash
 cd smart-admin-web-javascript
 pnpm install
-pnpm localhost          # 本地联调，指向后端 1024
+pnpm localhost          # 本地联调，指向后端 9090
 ```
 
 ## 环境切换
@@ -97,23 +97,23 @@ pnpm localhost          # 本地联调，指向后端 1024
 # 自定义项目根路径
 ./auto-deploy-generated-code.ps1 -zipPath "<zip>" `
   -backendRoot "<后端根>" -frontendRoot "<前端根>"
+
+# 自定义后端包路径（默认 com\example）
+./auto-deploy-generated-code.ps1 -zipPath "<zip>" -backendPackage "com\old\pkg"
 ```
 
 脚本会自动清理空目录（`config`、`mapper`）。运行后仍需手动：执行 `sql/*.sql` 建菜单、重启前后端。
 
-### `rename-pkg.sh` — Java 包名整体迁移
+### `scripts/rename-pkg.py` — Java 包名整体迁移
 
-把整个后端的包名从 `OLD` 整体改为 `NEW`，覆盖 java/xml/yml/vm 等文件内的点号与斜杠形态，并迁移物理目录、自检残留。默认 dry-run，加 `--apply` 才真改。
+把整个后端的包名从 `OLD` 整体改为 `NEW`，覆盖 java/xml/yml/vm 等文件内的点号与斜杠形态，并迁移物理目录、自检残留。默认 dry-run，加 `--apply` 才真改（跨平台，替代原 bash 版 `rename-pkg.sh`）。
 
-```bash
+```powershell
 # 预览命中（不改文件）
-./rename-pkg.sh net.lab1024 com.example.project smart-admin-api-java17-springboot3
+python scripts\rename-pkg.py com.old.pkg com.example.project smart-admin-api-java17-springboot3
 
 # 确认无误后真改
-./rename-pkg.sh net.lab1024 com.example.project smart-admin-api-java17-springboot3 --apply
-
-# 改完验证
-./rename-pkg.sh net.lab1024 com.example.project smart-admin-api-java17-springboot3 --apply
+python scripts\rename-pkg.py com.old.pkg com.example.project smart-admin-api-java17-springboot3 --apply
 ```
 
 参数：`<OLD_DOTTED> <NEW_DOTTED> <TARGET_DIR> [--apply]`。`NEW` 段数可与 `OLD` 不同。改完建议 `cd <TARGET> && mvn -q -o compile` 验证。
