@@ -2,21 +2,21 @@ import { postRequest, getRequest } from '/@/lib/axios';
 export const positionApi = {
 
   /**
-   * 分页查询  @author  kaiyun
+   * 分页查询
    */
   queryPage : (param) => {
     return postRequest('/position/queryPage', param);
   },
 
   /**
-   * 增加  @author  kaiyun
+   * 增加
    */
   add: (param) => {
       return postRequest('/position/add', param);
   },
 
   /**
-   * 修改  @author  kaiyun
+   * 修改
    */
   update: (param) => {
       return postRequest('/position/update', param);
@@ -24,21 +24,21 @@ export const positionApi = {
 
 
   /**
-   * 删除  @author  kaiyun
+   * 删除
    */
   delete: (id) => {
       return getRequest(`/position/delete/${id}`);
   },
 
   /**
-   * 批量删除  @author  kaiyun
+   * 批量删除
    */
   batchDelete: (idList) => {
     return postRequest('/position/batchDelete', idList);
   },
 
   /**
-   * 查询列表  @author  kaiyun
+   * 查询列表
    */
   queryList: () => {
     return getRequest('/position/queryList');
