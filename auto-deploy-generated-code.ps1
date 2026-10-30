@@ -2,7 +2,8 @@ param(
     [Parameter(Mandatory=$true)]
     [string]$zipPath,
     [string]$backendRoot = "G:\ai-projects\smart-admin\smart-admin-api-java17-springboot3",
-    [string]$frontendRoot = "G:\ai-projects\smart-admin\smart-admin-web-javascript"
+    [string]$frontendRoot = "G:\ai-projects\smart-admin\smart-admin-web-javascript",
+    [string]$backendPackage = "com\example"
 )
 
 if (!(Test-Path $zipPath)) {
@@ -24,9 +25,9 @@ $moduleName = $moduleDir.Name
 
 Write-Host "Module: $moduleName" -ForegroundColor Yellow
 
-# Backend: copy to sa-admin/src/main/java/net/lab1024/sa/admin/module/business/{moduleName}
+# Backend: copy to sa-admin/src/main/java/{backendPackage}/sa/admin/module/business/{moduleName}
 Write-Host "Copying backend files..." -ForegroundColor Cyan
-$backendModuleRoot = Join-Path $backendRoot "sa-admin\src\main\java\net\lab1024\sa\admin\module\business\$moduleName"
+$backendModuleRoot = Join-Path $backendRoot "sa-admin\src\main\java\$backendPackage\sa\admin\module\business\$moduleName"
 New-Item -ItemType Directory -Path $backendModuleRoot -Force | Out-Null
 
 $srcModuleDir = Join-Path $javaDir $moduleName
@@ -157,7 +158,7 @@ Remove-Item $tempDir -Recurse -Force
 
 # Clean up empty directories in backend module
 Write-Host "Cleaning up empty directories..." -ForegroundColor Cyan
-$backendModuleRoot = Join-Path $backendRoot "sa-admin\src\main\java\net\lab1024\sa\admin\module\business\$moduleName"
+$backendModuleRoot = Join-Path $backendRoot "sa-admin\src\main\java\$backendPackage\sa\admin\module\business\$moduleName"
 @("config", "mapper") | ForEach-Object {
     $emptyDir = Join-Path $backendModuleRoot $_
     if ((Test-Path $emptyDir) -and @(Get-ChildItem $emptyDir -Recurse).Count -eq 0) {
