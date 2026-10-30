@@ -13,14 +13,14 @@ export const fileApi = {
     return postRequest('/support/file/queryPage', param);
   },
   /**
-   * 获取文件URL：根据fileKey @author 胡克
+   * 获取文件URL：根据fileKey
    */
   getUrl: (fileKey) => {
     return getRequest(`/support/file/getFileUrl?fileKey=${fileKey}`);
   },
 
   /**
-   * 下载文件流（根据fileKey） @author 胡克
+   * 下载文件流（根据fileKey）
    */
   downLoadFile: (fileKey) => {
     return getDownload('/support/file/downLoad', { fileKey });

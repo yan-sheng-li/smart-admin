@@ -49,7 +49,7 @@ mvn -Pdev clean package -DskipTests
 java -jar sa-admin/target/sa-admin-dev-3.0.0.jar
 ```
 
-默认端口 `1024`，依赖 MySQL `127.0.0.1:3306`（库名 `smart_admin_v3`，root/root）与 Redis `127.0.0.1:6379`（db1）。连接配置见 `sa-base/src/main/resources/<profile>/sa-base.yaml`。
+默认端口 `9090`，依赖 MySQL `127.0.0.1:3306`（库名 `smart_admin_v3`，root/root）与 Redis `127.0.0.1:6379`（db1）。连接配置见 `sa-base/src/main/resources/<profile>/sa-base.yaml`。
 
 ### 3. 启动前端
 

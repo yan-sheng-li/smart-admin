@@ -4,7 +4,7 @@ export const loginLogApi = {
   queryList: (param) => {
     return postRequest('/support/loginLog/page/query', param);
   },
-  // 分页查询当前登录人信息 @author 善逸
+  // 分页查询当前登录人信息
   queryListLogin: (param) => {
     return postRequest('/support/loginLog/page/query/login', param);
   },

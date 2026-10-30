@@ -8,8 +8,8 @@
 简介：接口加解密分为： 前端请求参数加解密 和 后端返回结果加解密。
 - 支持国密SM、AES加密算法。前端修改:/lib/encrypt.js文件，后端：启动 ApiEncryptServiceAesImpl 或者 ApiEncryptServiceSmImpl
 - 前端请看：/lib/encrypt.js、/lib/axios.js  /api/support/api-encrypt/api-encrypt-api.js 等文件
-- 后端请看：@ApiEncrypt 和 @ApiDecrypt 注解，具体请看 sa-common项目中的 net.lab1024.sa.common.module.support.apiencrypt 包
-- demo请看：前端：/views/support/api-encrypt 目录，后端 请看：sa-admin项目的：net.lab1024.sa.admin.module.system.support.AdminApiEncryptController
+- 后端请看：@ApiEncrypt 和 @ApiDecrypt 注解，具体请看 sa-common项目中的 com.example.sa.common.module.support.apiencrypt 包
+- demo请看：前端：/views/support/api-encrypt 目录，后端 请看：sa-admin项目的：com.example.sa.admin.module.system.support.AdminApiEncryptController
 </pre
       >
     </template>
